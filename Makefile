@@ -3,13 +3,13 @@ CXX_FLAGS := -std=c++17 -ggdb
 
 BIN     := bin
 SRC     := src
-_SRCOBJ = Tetris.cpp Board.cpp Line.cpp Piece.cpp
+_SRCOBJ = #Tetris.cpp Board.cpp Line.cpp Piece.cpp
 SRCOBJ = $(patsubst %,$(SRC)/%,$(_SRCOBJ))
 INCLUDE := include/
 
 #Creates list of Objects to make
 ODIR 	:= obj
-_OBJ = #Tetris.o Board.o Line.o Piece.o
+_OBJ = Tetris.o Board.o Line.o Piece.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 LIBRARIES   := lib
@@ -25,7 +25,7 @@ endif
 all: $(TOBUILD)
 
 win32: $(OBJ)
-	$(CXX) $(CXX_FLAGS) $(SRC)/$(EXECUTABLE).cpp $(OBJ) -o$(BIN)/$(EXECUTABLE).exe -L lib -I include -I include/curses lib/libUtil.a -lstdc++
+	$(CXX) $(CXX_FLAGS) $(SRC)/$(EXECUTABLE).cpp $(OBJ) -o$(BIN)/$(EXECUTABLE).exe -L lib -I./include lib/libUtil.a -lstdc++ -lpdcurses
 	copy $(LIBRARIES)\libUtil.dll bin
 	copy pdcurses.dll bin
 
