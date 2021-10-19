@@ -1,4 +1,6 @@
 # Tetris Game
+![](movie.gif)
+
 A simple Tetris Game made with game library created in the chapter 6 of *Programação em C++ - Conceitos Básicos e Algoritmos* by *Pimenta Rodrigues, Pedro Pereira e Manuela Sousa*.
 
 ## Intro
@@ -24,13 +26,13 @@ For windows users you just need MinGW32
 ## Compiling
 
 ```
-git clone https://github.com/HenriqueIII/Snake-Game.git
-cd Snake-Game
+git clone https://github.com/HenriqueIII/Tetris-Game.git
+cd Tetris-Game
 make
 ```
 ## Download
 Download at: (choose the version to your os)
-> https://github.com/HenriqueIII/Snake-Game/releases/latest
+> https://github.com/HenriqueIII/Tetris-Game/releases
 
 ## Start
 ```
